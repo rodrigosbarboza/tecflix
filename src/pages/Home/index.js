@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import Menu from './componentes/Menu/index';
-import dadosInicial from './data/dados_iniciais.json';
-import BannerMain from './componentes/BannerMain';
-import Carousel from './componentes/Carousel';
-import Footer from './componentes/Footer/index';
+import Menu from '../../componentes/Menu/index';
+import dadosInicial from '../../data/dados_iniciais.json';
+import BannerMain from '../../componentes/BannerMain';
+import Carousel from '../../componentes/Carousel';
+import Footer from '../../componentes/Footer/index';
 
 const AppWrapper = styled.div`
   background: var(--grayDark);
 }`;
 
-function App() {
+function Home() {
   return (
     <AppWrapper style={{backgrou: "#141414"}}>
       <Menu />
@@ -52,4 +52,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
