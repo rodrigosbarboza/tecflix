@@ -28,12 +28,13 @@ function CadastroCategoria() {
     );
   }
 
+  // ============
+
   useEffect(() => {
     if(window.location.href.includes('localhost')) {
       const URL = window.location.hostname.includes ('localhost') 
       ? 'http://localhost:8080/categorias'
-      : 'https://tdflix.herokuapp.com/categorias'; 
-      fetch(URL)
+      : 'https://tdflix.herokuapp.com/categorias';
        .then(async (respostaDoServer) =>{
         if(respostaDoServer.ok) {
           const resposta = await respostaDoServer.json();
@@ -75,7 +76,18 @@ function CadastroCategoria() {
           value={values.descricao}
           onChange={handleChange}
         />
-  
+        {/* <div>
+          <label>
+            Descrição:
+            <textarea
+              type="text"
+              value={values.descricao}
+              name="descricao"
+              onChange={handleChange}
+            />
+          </label>
+        </div> */}
+
         <FormField
           label="Cor"
           type="color"
@@ -83,7 +95,18 @@ function CadastroCategoria() {
           value={values.cor}
           onChange={handleChange}
         />
-  
+        {/* <div>
+          <label>
+            Cor:
+            <input
+              type="color"
+              value={values.cor}
+              name="cor"
+              onChange={handleChange}
+            />
+          </label>
+        </div> */}
+
         <button>
           Cadastrar
         </button>
@@ -106,5 +129,6 @@ function CadastroCategoria() {
     </PageDefault>
   )
 }
+
 
 export default CadastroCategoria;

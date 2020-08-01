@@ -106,5 +106,4 @@ FormField.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
 };
-
 export default FormField;
